@@ -37,7 +37,8 @@ class KonfirmasiPage extends StatelessWidget {
                   ),
                   readOnly: true,
                   decoration: InputDecoration(
-                    icon: Icon(Icons.airplane_ticket),
+                    prefixIcon: Icon(Icons.airplane_ticket),
+                    prefixIconColor: Colors.blue,
                     border: UnderlineInputBorder(),
                   ),
                 ),
@@ -45,7 +46,8 @@ class KonfirmasiPage extends StatelessWidget {
                   controller: TextEditingController(text: nama),
                   readOnly: true,
                   decoration: InputDecoration(
-                    icon: Icon(Icons.person),
+                    prefixIcon: Icon(Icons.person),
+                    prefixIconColor: Colors.blue,
                     labelText: 'Nama Pemesan',
                     border: InputBorder.none,
                   ),
@@ -54,7 +56,8 @@ class KonfirmasiPage extends StatelessWidget {
                   controller: TextEditingController(text: tujuan),
                   readOnly: true,
                   decoration: InputDecoration(
-                    icon: Icon(Icons.location_on_sharp),
+                    prefixIcon: Icon(Icons.location_on_sharp),
+                    prefixIconColor: Colors.blue,
                     labelText: 'Tujuan',
                     border: InputBorder.none,
                   ),
@@ -63,7 +66,8 @@ class KonfirmasiPage extends StatelessWidget {
                   controller: TextEditingController(text: jumlah),
                   readOnly: true,
                   decoration: InputDecoration(
-                    icon: Icon(Icons.catching_pokemon),
+                    prefixIcon: Icon(Icons.catching_pokemon),
+                    prefixIconColor: Colors.blue,
                     labelText: 'Jumlah Tiket',
                     border: InputBorder.none,
                   ),

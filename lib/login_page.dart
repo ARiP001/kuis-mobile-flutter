@@ -44,7 +44,8 @@ class _LoginPageState extends State<LoginPage> {
                       },
                       controller: _username,
                       decoration: InputDecoration(
-                        icon: Icon(Icons.person),
+                        prefixIcon: Icon(Icons.person),
+                        prefixIconColor: Colors.blue,
                         border: OutlineInputBorder(),
                         labelText: "Username"
                       )
@@ -59,7 +60,8 @@ class _LoginPageState extends State<LoginPage> {
                       controller: _password,
                       obscureText: true,
                       decoration: InputDecoration(
-                         icon: Icon(Icons.lock),
+                         prefixIcon: Icon(Icons.lock),
+                         prefixIconColor: Colors.blue,
                         border: OutlineInputBorder(),
                         labelText: "Password"
                       ),

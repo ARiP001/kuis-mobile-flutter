@@ -40,7 +40,8 @@ class _DashboardPageState extends State<DashboardPage> {
                     TextField(
                       controller: _namaController,
                       decoration: InputDecoration(
-                        icon: Icon(Icons.person),
+                        prefixIcon: Icon(Icons.person),
+                        prefixIconColor: Colors.blue,
                         border: OutlineInputBorder(),
                         labelText: "Nama Pemesan"
                       )
@@ -48,7 +49,8 @@ class _DashboardPageState extends State<DashboardPage> {
                     TextField(
                       controller: _tujuanController,
                       decoration: InputDecoration(
-                        icon: Icon(Icons.location_on_sharp),
+                        prefixIcon: Icon(Icons.location_on_sharp),
+                        prefixIconColor: Colors.blue,
                         border: OutlineInputBorder(),
                         labelText: "Tujuan Perjalanan"
                       )
@@ -57,7 +59,8 @@ class _DashboardPageState extends State<DashboardPage> {
                       controller: _jumlahController,
                       keyboardType: TextInputType.number,
                       decoration: InputDecoration(
-                        icon: Icon(Icons.airplane_ticket_sharp),
+                        prefixIcon: Icon(Icons.airplane_ticket_sharp),
+                        prefixIconColor: Colors.blue,
                         border: OutlineInputBorder(),
                         labelText: "Jumlah Tiket"
                       )
