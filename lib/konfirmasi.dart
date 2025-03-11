@@ -23,72 +23,74 @@ class KonfirmasiPage extends StatelessWidget {
         child: SizedBox(
           height: 350,
           child : Card(
-            child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-              TextField(
-                controller: TextEditingController(
-                  text: "Detail Pemesanan"),
-                  style: TextStyle(fontSize: 30, 
-                  fontWeight: FontWeight.bold,
-                  color: Colors.blue
+            child: Padding(
+              padding: const EdgeInsets.fromLTRB(10, 0,10, 0),
+              child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                TextField(
+                  controller: TextEditingController(
+                    text: "Detail Pemesanan"),
+                    style: TextStyle(fontSize: 30, 
+                    fontWeight: FontWeight.bold,
+                    color: Colors.blue
+                  ),
+                  readOnly: true,
+                  decoration: InputDecoration(
+                    icon: Icon(Icons.airplane_ticket),
+                    border: UnderlineInputBorder(),
+                  ),
                 ),
-                readOnly: true,
-                decoration: InputDecoration(
-                  icon: Icon(Icons.airplane_ticket),
-                  border: UnderlineInputBorder(),
+                TextField(
+                  controller: TextEditingController(text: nama),
+                  readOnly: true,
+                  decoration: InputDecoration(
+                    icon: Icon(Icons.person),
+                    labelText: 'Nama Pemesan',
+                    border: InputBorder.none,
+                  ),
                 ),
-              ),
-              TextField(
-                controller: TextEditingController(text: nama),
-                readOnly: true,
-                decoration: InputDecoration(
-                  icon: Icon(Icons.person),
-                  labelText: 'Nama Pemesan',
-                  border: InputBorder.none,
+                TextField(
+                  controller: TextEditingController(text: tujuan),
+                  readOnly: true,
+                  decoration: InputDecoration(
+                    icon: Icon(Icons.location_on_sharp),
+                    labelText: 'Tujuan',
+                    border: InputBorder.none,
+                  ),
                 ),
-              ),
-              TextField(
-                controller: TextEditingController(text: tujuan),
-                readOnly: true,
-                decoration: InputDecoration(
-                  icon: Icon(Icons.location_on_sharp),
-                  labelText: 'Tujuan',
-                  border: InputBorder.none,
+                TextField(
+                  controller: TextEditingController(text: jumlah),
+                  readOnly: true,
+                  decoration: InputDecoration(
+                    icon: Icon(Icons.catching_pokemon),
+                    labelText: 'Jumlah Tiket',
+                    border: InputBorder.none,
+                  ),
                 ),
-              ),
-              TextField(
-                controller: TextEditingController(text: jumlah),
-                readOnly: true,
-                decoration: InputDecoration(
-                  icon: Icon(Icons.catching_pokemon),
-                  labelText: 'Jumlah Tiket',
-                  border: InputBorder.none,
-                ),
-              ),
-              SizedBox(
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    ElevatedButton(onPressed: (){
-                      Navigator.pop(context);
-                    }, child: Text('Kembali')),
-                    
-                    ElevatedButton(onPressed: (){
-                      ScaffoldMessenger.of(context).showSnackBar(
-                      const SnackBar(content: Text('Logout Berhasil'))
-                    );
-                    Navigator.pushAndRemoveUntil(context,
-                      MaterialPageRoute(builder: (context)=>LoginPage()),
-                      (route)=> false
-                    );
-                    }, child: Text('Logout'))
-                  ],
-                ),
-              )
-              
-            ],
-          ),
+                SizedBox(
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      ElevatedButton(onPressed: (){
+                        Navigator.pop(context);
+                      }, child: Text('Kembali')),
+                      
+                      ElevatedButton(onPressed: (){
+                        ScaffoldMessenger.of(context).showSnackBar(
+                        const SnackBar(content: Text('Logout Berhasil'))
+                      );
+                      Navigator.pushAndRemoveUntil(context,
+                        MaterialPageRoute(builder: (context)=>LoginPage()),
+                        (route)=> false
+                      );
+                      }, child: Text('Logout'))
+                    ],
+                  ),
+                )
+              ],
+                        ),
+            ),
           )
           
         ))
