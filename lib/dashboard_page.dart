@@ -27,10 +27,15 @@ class _DashboardPageState extends State<DashboardPage> {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    Image.asset('assets/images/banner.png'),
+                    SizedBox(
+                      // width: 300,
+                      child: Image.asset('assets/images/banner.png')),
                     Text(
                       'Form Pemesanan',
-                      style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
+                      style: TextStyle(
+                        fontSize: 30, 
+                        fontWeight: FontWeight.bold,
+                        color: Colors.blue),
                     ),
                     TextField(
                       controller: _namaController,

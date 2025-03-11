@@ -20,18 +20,24 @@ class KonfirmasiPage extends StatelessWidget {
       ),
       body: Padding(
         padding: const EdgeInsets.fromLTRB(10, 200, 10, 20),
-        child:SizedBox(
+        child: SizedBox(
           height: 350,
           child : Card(
             child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              Text(
-                'Detail Pemesanan',
-                style: TextStyle(
-                  fontSize: 30, 
+              TextField(
+                controller: TextEditingController(
+                  text: "Detail Pemesanan"),
+                  style: TextStyle(fontSize: 30, 
                   fontWeight: FontWeight.bold,
-                  color: Colors.blue),
+                  color: Colors.blue
+                ),
+                readOnly: true,
+                decoration: InputDecoration(
+                  icon: Icon(Icons.airplane_ticket),
+                  border: UnderlineInputBorder(),
+                ),
               ),
               TextField(
                 controller: TextEditingController(text: nama),
@@ -60,18 +66,27 @@ class KonfirmasiPage extends StatelessWidget {
                   border: InputBorder.none,
                 ),
               ),
-              ElevatedButton(onPressed: (){
-                Navigator.pop(context);
-              }, child: Text('Kembali')),
-              ElevatedButton(onPressed: (){
-                ScaffoldMessenger.of(context).showSnackBar(
-                  const SnackBar(content: Text('Logout Berhasil'))
-                );
-                Navigator.pushAndRemoveUntil(context,
-                MaterialPageRoute(builder: (context)=>LoginPage()),
-                (route)=> false
-                );
-              }, child: Text('Logout'))
+              SizedBox(
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    ElevatedButton(onPressed: (){
+                      Navigator.pop(context);
+                    }, child: Text('Kembali')),
+                    
+                    ElevatedButton(onPressed: (){
+                      ScaffoldMessenger.of(context).showSnackBar(
+                      const SnackBar(content: Text('Logout Berhasil'))
+                    );
+                    Navigator.pushAndRemoveUntil(context,
+                      MaterialPageRoute(builder: (context)=>LoginPage()),
+                      (route)=> false
+                    );
+                    }, child: Text('Logout'))
+                  ],
+                ),
+              )
+              
             ],
           ),
           )

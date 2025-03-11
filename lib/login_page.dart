@@ -26,7 +26,10 @@ class _LoginPageState extends State<LoginPage> {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    Image.asset('assets/images/logo.png'),
+                    SizedBox(
+                      height: 80,
+                      child: Image.asset('assets/images/logo.png')
+                      ),
                     Text(
                       'Selamat Datang di Aplikasi Pemesanan Tiket',
                       style: TextStyle(fontSize: 15),
@@ -59,10 +62,9 @@ class _LoginPageState extends State<LoginPage> {
                          icon: Icon(Icons.lock),
                         border: OutlineInputBorder(),
                         labelText: "Password"
-                      )
+                      ),
                     ),
                     SizedBox(
-                        width: double.infinity,
                         child: ElevatedButton(
                           onPressed: (){
                             if (_formkey.currentState!.validate()) {
